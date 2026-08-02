@@ -325,27 +325,33 @@ Ao terminar o loop, o navegador é fechado e o Prefect registra o status final d
 ## 5. Arquitetura de Pastas
 
 ```
-RPA_NFS_NEW/
-├── main.py                  # Entry point do fluxo Prefect
-├── config/
-│   ├── settings.py          # Credenciais, URLs, paths
-│   └── credentials.env      # Variáveis de ambiente sensíveis
-├── src/
-│   ├── orchestrator.py      # Definição do flow Prefect
-│   ├── browser_setup.py     # Configuração do Chrome + BotCity
-│   ├── api_client.py        # Cliente HTTP para API de NFS
-│   ├── portal_nfs.py        # Interações com o Portal Nacional
-│   ├── captcha_solver.py    # Integração com NopeCaptcha
-│   └── file_manager.py      # Download, movimentação e renomeação
-├── downloads/
-│   ├── 01-2026/
-│   ├── 02-2026/
-│   └── ...
-├── logs/
-│   └── prefect_logs.log
+NFS_NEW/
+├── bot.py                     # Script principal do robô
+├── Bot.xaml                   # Workflow UiPath
+├── Bot.docx                   # Documentação complementar (Word)
+├── NFS_NEW.jproj              # Arquivo de projeto UiPath
+├── prefect.yaml               # Configuração de orquestração Prefect
+├── requirements.txt           # Dependências Python
+├── requirements.bat           # Instalador de dependências
+├── build.bat                  # Script de build (Windows Batch)
+├── build.ps1                  # Script de build (PowerShell)
+├── build.sh                   # Script de build (Bash)
+├── .env                       # Variáveis de ambiente
+├── .prefectignore             # Regras de ignore do Prefect
+├── .vscode/
+│   └── settings.json          # Configurações do VS Code
+├── perfil/                    # Perfil do Chrome utilizado pelo Selenium
+├── nfs/
+│   └── teste_.pdf             # PDF de teste
+├── download/
+│   └── (PDFs baixados após emissão)
+├── resources/                 # Recursos auxiliares
+├── venv/                      # Ambiente virtual Python
+├── __pycache__/               # Cache de bytecode Python
 └── doc_projeto/
-    ├── sequencia_atividades.md
-    └── documentation.md
+    ├── README.md              # Documentação geral (GitHub)
+    ├── sequencia_atividades.md # Sequência passo a passo do robô
+    └── documentation.md       # Documentação técnica completa
 ```
 
 ---

@@ -19,18 +19,23 @@ Automação completa do ciclo de emissão de Nota Fiscal de Serviço Eletrônica
 git clone https://github.com/seu-usuario/rpa-nfse-emissao.git
 cd rpa-nfse-emissao
 pip install -r requirements.txt
-python main.py
+python bot.py
 ```
 
 ## Estrutura
 
 ```
-├── main.py
-├── config/          # Credenciais e settings
-├── src/             # Core do RPA (orquestrador, portal, captcha, arquivos)
-├── doc_projeto/     # Documentação do projeto
-├── downloads/       # PDFs organizados por mês
-└── logs/
+├── bot.py               # Script principal do robô
+├── Bot.xaml             # Workflow UiPath
+├── NFS_NEW.jproj        # Projeto UiPath
+├── prefect.yaml         # Orquestração Prefect
+├── requirements.txt     # Dependências
+├── .env                 # Variáveis de ambiente
+├── perfil/              # Perfil Chrome (Selenium)
+├── nfs/                 # PDFs de teste
+├── download/            # PDFs emitidos
+├── resources/           # Recursos auxiliares
+└── doc_projeto/         # Documentação
 ```
 
 ## Funcionalidades
