@@ -13,14 +13,6 @@ Automação completa do ciclo de emissão de Nota Fiscal de Serviço Eletrônica
 | [sequencia_atividades.md](sequencia_atividades.md) | Lista passo a passo das atividades executadas pelo robô |
 | [documentation.md](documentation.md) | Documentação completa com MER, fluxogramas, diagrama de sequência e detalhamento técnico |
 
-## Quick Start
-
-```bash
-git clone https://github.com/seu-usuario/rpa-nfse-emissao.git
-cd rpa-nfse-emissao
-pip install -r requirements.txt
-python bot.py
-```
 
 ## Estrutura
 
